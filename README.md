@@ -51,4 +51,5 @@ _sqlResult = "a3m_db_core" callExtension ["exec", ["CREATE TABLE IF NOT EXISTS e
 3. The new compiled library will be output to: `target/release/liba3m_db_core.so`.
 4. Copy it to your server mod folder and rename it: `cp target/release/liba3m_db_core.so /home/brian-vasquez/arma3server/@a3m_db_core/a3m_db_core_x64.so`
 5. Add `-serverMod=@a3m_db_core` to your launch parameters.
+   * **CRITICAL:** You MUST load this as a `-serverMod=`, NOT a standard `-mod=`. Clients do not need to download this extension, and loading it as a regular mod can cause signature errors.
 6. The database generates automatically at: `a3m_database.sqlite` (in the server root). Alternatively, you can use the pre-packaged `example_a3m_database.sqlite` provided in this repository as a clean template.
