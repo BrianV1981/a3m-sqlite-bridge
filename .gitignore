@@ -1,0 +1,4 @@
+rust_extension/target/
+rust_extension/Cargo.lock
+*.tmp
+*.bak
